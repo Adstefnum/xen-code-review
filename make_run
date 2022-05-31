@@ -1,0 +1,4 @@
+rm ./check
+clear
+make
+./check
