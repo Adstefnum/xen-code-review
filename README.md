@@ -18,7 +18,6 @@
 
 ## COST AND BUGS OPTIMIZATION
 
-### STEPS TAKEN
 - line 56- char pointer collects only a single character and we would like more than a character in the checksum usually so we use a const char  array[] or just std::string and rename the string to something better.
     ```cpp
 
