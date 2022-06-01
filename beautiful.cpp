@@ -49,7 +49,7 @@ class SomeClass : public BaseClass
 
 	void printValue(void)
 	{
-		printf("the string is %s\n", _string);
+		printf("the string is %c\n", _string);
 		printf("the checksum is %ld\n", checksum(_string));
 	}
 
@@ -68,26 +68,26 @@ class SomeClass : public BaseClass
 
 int main(int argc, char *argv[])
 {
-	BaseClass* object;
-	int i;
 
+    BaseClass *object;
+    SomeClass someclass;
+    object = & someclass;
 	if (argc < 3)
 	{
 		printf("Usage: %s <repeats> <string> [null]\n", argv[0]);
-		throw -1;
+        std::exit(1);
 	}
 
-	for (i = 0; i < atoi(argv[1]); i++)
+    if (argc == 4 && argv[3]=="null")
 	{
-		object = new SomeClass;
+		object->setString(NULL);
+		object->printValue(); 
+	}
 
+	for (int i = 0; i < atoi(argv[1]); i++)
+	{
 		object->setString(argv[2]);
 		object->printValue();
 	}
 
-	if (argc == 4)
-	{
-		object->setString(NULL);
-		object->printValue();
-	}
 }
