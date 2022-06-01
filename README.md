@@ -10,11 +10,11 @@
 
 #### Proof of Concept
 - Generate a string of 1016 As with python
-[generate 1016 As](pics/pygen)
+[generate 1016 As](pics/pygen.png)
 - Compile the string with the debug(-g) flag
-[compile](pics/compile)
+[compile](pics/compile.png)
 - run with gdb
-[segfault](pics/segfault)
+[segfault](pics/segfault.png)
 
 ## COST AND BUGS OPTIMIZATION
 
